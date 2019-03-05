@@ -16,8 +16,6 @@ class Bear
   end
 
   def take_fish_from_river(river)
-    fish = river.fish_population.sample
-    @stomach << fish
-    river.fish_population.delete(fish)
+    @stomach << river.take_fish
   end
 end
